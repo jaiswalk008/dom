@@ -47,8 +47,11 @@ method for html collections*/
 //get elemts by tag name
 
 let li = document.getElementsByTagName('li');
-console.log(li); //selects all the elements by tag name of 'li'
+// console.log(typeof li);
+// console.log(li); //selects all the elements by tag name of 'li'
+li[2].style.backgroundColor = 'green';
 for(let i=0;i<li.length;i++){
     //li is html collection of items having tag name of li
-    li[i].style.backgroundColor='red';
+    
+    li[i].style.fontWeight='bold';
 }
