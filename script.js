@@ -72,21 +72,22 @@ method for html collections*/
 // var submit = document.querySelector('input[type="submit"]');
 // submit.value='sent';
 
-var item = document.querySelector('.list-group-item');
-item.style.color='red';
+// var item = document.querySelector('.list-group-item');
+// item.style.color='red';
 
-// var lastItem = document.querySelector('.list-group-item:last-child');
-// lastItem.style.color= 'red';
+// // var lastItem = document.querySelector('.list-group-item:last-child');
+// // lastItem.style.color= 'red';
 
-var secondItem = document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.backgroundColor='blue';
+// var secondItem = document.querySelector('.list-group-item:nth-child(2)');
+// secondItem.style.backgroundColor='blue';
 
-var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
-thirdItem.style.visibility='hidden';
+// var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+// thirdItem.style.visibility='hidden';
 // //query selector all -- same as class name or tag name
 // var titles = document.querySelectorAll('.title');
 // console.log(titles);//returns a nodelist and we can perform array methods on nodelist
 // titles[0].textContent = 'hello';
+
 
 
 // var odd = document.querySelectorAll('li:nth-child(odd)');
@@ -96,11 +97,98 @@ thirdItem.style.visibility='hidden';
 //     odd[i].style.backgroundColor='yellow';
 //     even[i].style.backgroundColor='red';
 // }
-var items = document.querySelectorAll('li');
-// console.log(items) --> nodelist
-items[1].style.color='green';
-var odd = document.querySelectorAll('li:nth-child(odd)');
-console.log(odd);
-for(let i=0;i<odd.length;i++){
-    odd[i].style.backgroundColor='green';
-}
+// var items = document.querySelectorAll('li');
+// // console.log(items) --> nodelist
+// items[1].style.color='green';
+// var odd = document.querySelectorAll('li:nth-child(odd)');
+// console.log(odd);
+// for(let i=0;i<odd.length;i++){
+//     odd[i].style.backgroundColor='green';
+// }
+
+//Traversing the DOM
+
+//parent node
+ var itemList= document.querySelector('#items');
+// console.log(itemList.parentNode)
+// itemList.parentNode.style.backgroundColor='red'
+// console.log(itemList.parentNode.parentNode.parentNode)
+
+//parent element
+// same as parent Node
+
+/*below line will also show text nodes because of implicit <br> elements
+will return nodelist*/
+console.log(itemList.childNodes);
+
+//children will return html collection with no text element 
+// in between so its better to use
+
+console.log(itemList.children);
+console.log(itemList.children[1]);
+itemList.children[1].style.backgroundColor='yellow';
+
+console.log(itemList.firstChild);
+//above line returns text element again
+
+console.log(itemList.firstElementChild);
+//above line returns first li
+//itemList.firstElementChild.textContent='hello world';
+
+console.log(itemList.lastElementChild);
+//above line returns first li
+itemList.lastElementChild.textContent='hello last';
+
+
+//siblings
+
+//nextsibling
+
+console.log(itemList.nextSibling);//show text element
+
+console.log(itemList.nextElementSibling);//shows span
+
+//previous sibling
+
+console.log(itemList.previousSibling);//shows text
+
+console.log(itemList.previousElementSibling);//show hw
+
+//create element
+//create a div
+
+var newDiv = document.createElement('div');
+newDiv.className='hello'; //add class
+newDiv.id='newId';
+newDiv.setAttribute('title','hello div');//attribute type , value
+
+
+//create text Node
+
+var newDivText = document.createTextNode('Hello World');
+newDiv.appendChild(newDivText);
+
+//inserting div before h1 of item listener
+//in the header the .container class
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+container.insertBefore(newDiv,h1) //element , insertion before
+
+console.log(newDiv);
+
+newDiv.style.fontSize='30px';
+
+//adding before item1
+let newLi = document.createElement('li');
+newLi.className='list-group-item';
+//create text Node
+var text = document.createTextNode('Hello World');
+newLi.appendChild(text);
+//inserting before the item 1
+
+var ul = document.querySelector('div #items');
+var item1 = document.querySelector('div .list-group-item');
+
+ul.insertBefore(newLi , item1);
+
+console.log(newLi.textContent)
