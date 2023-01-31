@@ -14,7 +14,7 @@
 //     console.log(e.target.id);
 //     console.log(e.target.className);
 //     console.log(e.target.classList);
-  var output = document.getElementById('output');
+//   var output = document.getElementById('output');
 //     output.innerHTML = '<h3>'+e.target.id +'</h3>';
 //     console.log(e.type);
 //     //mouse position from the window
@@ -33,14 +33,14 @@
 //     console.log(e.shiftKey);
 
 // }
-var button = document.getElementById('button');
+// var button = document.getElementById('button');
 // button.addEventListener('dblclick',runEvent);
 //mousedown works immediately after the mouse is pressed down
 //without lifting the finger while mouseup
 //works only when we lift our finger up
 // button.addEventListener('click',runEvent); 
 // button.addEventListener('mousedown',runEvent); 
-var box = document.getElementById('box');
+// var box = document.getElementById('box');
 // button.addEventListener('mouseup',runEvent); 
 
 // // box.addEventListener('mousedown',runEvent); 
@@ -54,8 +54,8 @@ var box = document.getElementById('box');
 //again for child elements
 // box.addEventListener('mousemove',runEvent);
 
-var itemInput = document.querySelector('input[type="text"]');
-var form = document.querySelector('form');
+// var itemInput = document.querySelector('input[type="text"]');
+// var form = document.querySelector('form');
 
 // itemInput.addEventListener('keydown',runEvent);
 // itemInput.addEventListener('keyup',runEvent);
@@ -71,19 +71,20 @@ var form = document.querySelector('form');
 
 //itemInput.addEventListener('input',runEvent);
 
-form.addEventListener('submit',runEvent);
-var opt = document.querySelector('select');
-//opt.addEventListener('change',runEvent);
-function runEvent(e){
-    e.preventDefault();
-    //console.log('event type: ' +e.type);
-    console.log(itemInput.value);
-    console.log(opt.value);
-    // output.innerHTML='<h3>'+e.offsetX+'</h3><h3>'+
-    // e.offsetY+'<h3>';
-    // box.style.backgroundColor="rgb("+e.offsetX+","+
-    // e.offsetY+",35)";
-    // document.body.style.backgroundColor="rgb("+e.offsetY+","+
-    // e.offsetX+",40)";
+// form.addEventListener('submit',runEvent);
+// var opt = document.querySelector('select');
+// //opt.addEventListener('change',runEvent);
+// function runEvent(e){
+//     e.preventDefault();
+//     //console.log('event type: ' +e.type);
+//     console.log(itemInput.value);
+//     console.log(opt.value);
+//     // output.innerHTML='<h3>'+e.offsetX+'</h3><h3>'+
+//     // e.offsetY+'<h3>';
+//     // box.style.backgroundColor="rgb("+e.offsetX+","+
+//     // e.offsetY+",35)";
+//     // document.body.style.backgroundColor="rgb("+e.offsetY+","+
+//     // e.offsetX+",40)";
 
-}
+// }
+

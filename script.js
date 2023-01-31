@@ -179,31 +179,31 @@
 // newDiv.style.fontSize='30px';
 
 //adding before item1
-let newLi = document.createElement('li');
-newLi.className='list-group-item';
-//create text Node
-var text = document.createTextNode('Hello World');
-newLi.appendChild(text);
-//inserting before the item 1
+// let newLi = document.createElement('li');
+// newLi.className='list-group-item';
+// //create text Node
+// var text = document.createTextNode('Hello World');
+// newLi.appendChild(text);
+// //inserting before the item 1
 
-var ul = document.querySelector('div #items');
-var item1 = document.querySelector('div .list-group-item');
+// var ul = document.querySelector('div #items');
+// var item1 = document.querySelector('div .list-group-item');
 
-ul.insertBefore(newLi , item1);
+// ul.insertBefore(newLi , item1);
 
-console.log(newLi.textContent)
+// console.log(newLi.textContent)
 
- let newLi2 = document.createElement('li');
- newLi2.className='list-group-item';
- var text1 = document.createTextNode('new item 2');
- newLi2.appendChild(text1);
+//  let newLi2 = document.createElement('li');
+//  newLi2.className='list-group-item';
+//  var text1 = document.createTextNode('new item 2');
+//  newLi2.appendChild(text1);
  
- var ul = document.querySelector('div #items');
-//  var item2 = document.querySelectorAll('div .list-group-item');
-//  console.log(item2[2].textContent);
+//  var ul = document.querySelector('div #items');
+// //  var item2 = document.querySelectorAll('div .list-group-item');
+// //  console.log(item2[2].textContent);
 
-//  ul.insertBefore(newLi2 , item2[2]);
- var item2 = document.querySelector('div .list-group-item:nth-child(3)');
- ul.insertBefore(newLi2 , item2);
+// //  ul.insertBefore(newLi2 , item2[2]);
+//  var item2 = document.querySelector('div .list-group-item:nth-child(3)');
+//  ul.insertBefore(newLi2 , item2);
 
- console.log(newLi2);
+//  console.log(newLi2);
