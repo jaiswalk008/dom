@@ -15,13 +15,16 @@ function addItem(e){
     e.preventDefault();
     
     var newItem = document.getElementById('item');
+    var des = document.getElementById('description');
     var items = document.getElementById('items');
     //create new li element
     var li = document.createElement('li');
     li.className='list-group-item';
 
     //add text node in li
-    li.appendChild(document.createTextNode(newItem.value));
+    //adding values of both the field so that .indexOf function will work for the 
+    //entire text
+    li.appendChild(document.createTextNode(newItem.value + ' '+des.value));
     var dlt =document.createElement('button');
     //edit button
     var edit = document.createElement('button');
@@ -42,7 +45,9 @@ function addItem(e){
     // itemList.insertBefore(li,items.lastElementChild);
 
     newItem.value='';
+    des.value='';
     // console.log(li)
+    
 } 
 
 //delete function
@@ -65,9 +70,11 @@ function filterItems(e){
     //items is a html collection and needs to ve converted to an array
     Array.from(items).forEach(function(item){
         var itemName = item.firstChild.textContent;
+        console.log(itemName);
         //all the items will be printed console.log(itemName);
         if(itemName.toLowerCase().indexOf(text)!=-1){
             item.style.display='block';
+            //itemName.style.color='yellow';
         }
         else{
             item.style.display='none';
